@@ -1,0 +1,11 @@
+firebase==3.0.1
+Flask==2.2.2
+Flask_Mail==0.9.1
+flask_sqlalchemy==3.0.2
+pyrebase==3.0.27
+Pyrebase4==4.6.0
+requests_toolbelt==0.10.1
+SQLAlchemy==1.4.45
+Werkzeug==2.2.2
+sseclient==0.0.27
+gunicorn

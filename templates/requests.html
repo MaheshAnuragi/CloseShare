@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% block head%}
+<title>
+    Home
+</title>
+{% endblock %}
+{% block body%}
+
+<style>
+    .fab {
+        width: 50px;
+        height: 50px;
+        background-color: rgb(3, 107, 15);
+        border-radius: 50%;
+        box-shadow: 0 6px 10px 0 #666;
+
+        font-size: 50px;
+        line-height: 45px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+
+        position: fixed;
+        right: 100px;
+        bottom: 50px;
+
+        transition: all 0.1s ease-in-out;
+    }
+
+    .fab:hover {
+        box-shadow: 0 6px 14px 0 #666;
+        transform: scale(1.05);
+    }
+
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+</style>
+
+<main class="container">
+    <div class="p-4  mb-5 text-white text-center rounded text-dark " style="border-radius: 57px;
+    background-color: linear-gradient(to right bottom, #f2b26e, #ffbaa9, #ffcfdd, #fee9fa, #ffffff);
+    box-shadow:  27px 27px 54px #b88290,
+                 -27px -27px 54px #ffc8dc;
+    ">
+        <div class="col text-center" style="border-radius: 57px;
+        background-color: linear-gradient(to right bottom, #f2b26e, #ffbaa9, #ffcfdd, #fee9fa, #ffffff);
+       
+        ">
+            <h1 class="display-4 text-center ">All Requests</h1>
+
+        </div>
+    </div>
+</main>
+
+
+
+{% for i in all_data %}
+
+<div class="row g-0 border  mb-2 rounded overflow-hidden flex-md-row  h-md-250 position-relative"
+    style="padding: 10px; background-color: aliceblue; border: #666; border-radius: 2px; margin-left: 75px; margin-right: 75px;">
+
+    <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 text-primary">closeShare</strong>
+        <h3 class="mb-0  text-anchor fst-italic ">{{i[1]['title'] }}</h3>
+        <div class="mb-1 text-muted">{{i[1]['name']}}</div>
+        <p class="card-text text-dark mb-auto">{{i[1]['description']}}</p>
+        <a href="/view/{{i[1]}}">More...</button></a>
+        <!-- <a href="#" >More...</a> -->
+    </div>
+
+    <div class="col-auto d-none d-lg-block">
+
+        <div style="margin:5px ;">
+
+
+            <br>
+
+            <a href="/respond/{{i[1]}}" button type="button" class="btn btn-success mx-2">Respond</button> </a>
+            <br>
+            <br>
+            <br>
+            {% if i[1]['Email'] == user_mail %}
+
+            <a href="/resolved/{{i[0]}}" button type="button" class="btn btn-danger mx-2">Delete</button></a>
+
+            {% endif %}
+
+        </div>
+
+
+    </div>
+</div>
+
+
+
+{% endfor %}
+<main>
+    <a href="/requestform">
+        <div class="fab">
+            +
+        </div>
+    </a>
+</main>
+{% endblock %}
+</body>
+
+</html>

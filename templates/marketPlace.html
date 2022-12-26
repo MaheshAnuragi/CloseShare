@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% block head%}
+<title>
+  MarketPlace
+</title>
+{% endblock %}
+
+
+
+{% block body%}
+
+<style>
+  .fab {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(3, 107, 15);
+    border-radius: 50%;
+    box-shadow: 0 6px 10px 0 #666;
+
+    font-size: 50px;
+    line-height: 45px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+
+    position: fixed;
+    right: 100px;
+    bottom: 50px;
+
+    transition: all 0.1s ease-in-out;
+  }
+
+  .fab:hover {
+    box-shadow: 0 6px 14px 0 #666;
+    transform: scale(1.05);
+  }
+
+
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+
+<main class="container">
+  <div class="p-4 p-md-6 mb-5 text-white rounded "  style="border-radius: 57px;
+  background-color: linear-gradient(to right bottom, #f2b26e, #ffbaa9, #ffcfdd, #fee9fa, #ffffff);
+  box-shadow:  27px 27px 54px #b88290,
+               -27px -27px 54px #ffc8dc;
+  ">
+    <div class="col-md-6 px-0"  style="border-radius: 57px;
+    background-color: linear-gradient(to right bottom, #f2b26e, #ffbaa9, #ffcfdd, #fee9fa, #ffffff);
+    
+    
+    ">
+      <h1 class="display-4 fst-italic">First MarketPlace For IIIT-D Community </h1>
+      <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently
+        about what’s most interesting in this post’s contents.</p>
+      <a button class="btn btn-outline-success" href='/Add_MarketPlace'
+        class="text-white fw-bold">Contribute</button></a>
+    </div>
+  </div>
+</main>
+
+
+{% for i in all_data %}
+
+
+
+<div class="row mb-2">
+  <div class="col-md-6">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative "
+      style="height: 350px; width: 500px; padding: 10px; margin-left: 90px; background-color: rgb(255, 255, 255);">
+      <div class="col p-4 d-flex flex-column position-static ">
+        <strong class="d-inline-block mb-2 text-primary">closeShare</strong>
+        <h3 class="mb-0">{{i[0]['title']}}</h3>
+        <div class="mb-1 text-muted">{{i[0]['date']}}</div>
+        <p class="card-text mb-auto">Owner : {{i[0]['phone']}}</p>
+        <p class="card-text mb-auto">{{i[0]['sd']}}</p>
+
+        <!-- <a href="/viewm" class="stretched-link">More...</button></a> -->
+      </div>
+
+      <div class="col-auto d-none d-lg-block">
+
+        <img src="{{i[0]['photo']}}" alt="banner-img" width="200" height="255">
+
+
+      </div>
+    </div>
+  </div>
+
+  {% if i|length > 1 %}
+  <div class="col-md-6">
+    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+      style="height: 350px; width: 500px; padding: 10px; background-color: rgb(255, 255, 255);">
+      <div class="col p-4 d-flex flex-column position-static">
+        <strong class="d-inline-block mb-2 text-primary">closeShare</strong>
+        <h3 class="mb-0">{{i[1]['title']}}</h3>
+        <div class="mb-1 text-muted">{{i[1]['date']}}</div>
+        <p class="card-text mb-auto">Owner :{{i[1]['phone']}}</p>
+        <p class="card-text mb-auto">{{i[1]['sd']}}</p>
+
+        <!-- <a href="/viewm" class="stretched-link">More...</button></a> -->
+      </div>
+
+      <div class="col-auto d-none d-lg-block">
+
+        <img src="{{i[1]['photo']}}" alt="banner-img" width="200" height="255">
+
+
+      </div>
+    </div>
+
+  </div>
+  {% endif %}
+
+
+
+
+
+
+
+
+  {% endfor %}
+
+
+  <main>
+    <a href='/Add_MarketPlace'>
+      <div class="fab">
+        +
+      </div>
+    </a>
+  </main>
+
+  {% endblock %}
+  </body>
+
+  </html>

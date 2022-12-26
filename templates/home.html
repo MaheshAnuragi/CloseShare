@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% block head%}
+<title>
+    Home
+</title>
+<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+{% endblock %}
+
+
+
+{% block body%}
+
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+
+    .temp {
+
+        border-radius: 29px;
+        /* background-image: linear-gradient(to right, #f6ba79, #ff9284, #ffb5d1, #feddfa, #ffffff); */
+        /* box-shadow: -34px 34px 67px #71400d,
+            34px -34px 67px #ffd029; */
+
+        background-image: linear-gradient(to right bottom, #f2b26e, #ffbaa9, #ffcfdd, #fee9fa, #ffffff);
+    }
+
+    .button {
+        border-radius: 20px;
+        background: linear-gradient(145deg, #c7667e, #cf738a);
+        box-shadow: 6px 6px 0px #a2707d,
+            -6px -6px 0px #edadbd;
+    }
+</style>
+<div class="wrapper animate__animated animate__zoomIn">
+    <div class="container">
+        <div class="row mb-2" style="margin-left: 5; ">
+            <div class="col">
+
+                <div class="card temp " style="width: 18rem;">
+                    <img src="static\1.jpg" class="card-img-top" alt="..." height="250">
+                    <div class="card-body">
+                        <h5 class="card-title">Request Goods or Services</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+
+                        <div class="row">
+                            <div class="col">
+                                <a href="/requests" class="btn d-flex btn-primary " style="border-radius: 20px;">View
+                                    Requests</a>
+                            </div>
+                            <div class="col">
+                                <a href="/requestform" class="btn d-flex btn-primary" style="border-radius: 20px;">Place
+                                    Request</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col ">
+
+                <div class="card temp" style="width: 18rem;">
+                    <img src="static\4.png" class="card-img-top" alt="..." height="250">
+                    <div class="card-body">
+                        <h5 class="card-title">Placement Resources</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+
+                        <div class="row">
+                            <div class="col">
+                                <a href="/placement" class="btn d-flex btn-primary " style="border-radius: 20px;">View
+                                    Questions</a>
+                            </div>
+                            <div class="col">
+                                <a href="/Add_Questions" class="btn d-flex btn-primary" style="border-radius: 20px;">Add
+                                    Questions</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col ">
+
+                <div class="card temp" style="width: 18rem;">
+                    <img src="static\mp.png" class="card-img-top " alt="..." height="250">
+                    <div class="card-body">
+                        <h5 class="card-title">MarketPlace</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+
+                        <div class="row">
+                            <div class="col">
+                                <a href="/marketPlace" class="btn d-flex btn-primary " style="border-radius: 20px;">Market
+                                    Place</a>
+                            </div>
+                            <div class="col">
+                                <a href="/Add_MarketPlace" class="btn d-flex btn-primary" style="border-radius: 20px;">Add an  Item
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+</body>
+
+</html>

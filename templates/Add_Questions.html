@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block head%}
+<title>
+    Add_Questions
+</title>
+{% endblock %}
+
+
+
+{% block body%}
+
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+</style>
+
+<div class="container">
+    <div class="p-4 p-md-6 mb-5 text-white rounded" style="background-color:#e46081;">
+        <div class="col-md-6 px-0">
+            <h1 class="display-7 fst-italic" style="text-align: center;">Add Placement Questions </h1>
+           
+        </div>
+    </div>
+
+
+
+
+<form class="row g-3" method="POST">
+    <div class="col-md-6">
+      <label for='QName' class="form-label">Full Name</label>
+      <input type="text" class="form-control"  name='QName'>
+    </div>
+    <div class="col-md-6">
+      <label for="QCompanyname" class="form-label" >Company Name</label>
+      <input type="text" class="form-control" name="QCompanyname" placeholder="APPLE">
+    </div>
+    <div class="col-6">
+      <label for="QDate" class="form-label" >Date</label>
+      <input type="text" class="form-control"  name="QDate" placeholder="">
+    </div>
+
+    <div class="col-md-6">
+        <label for="inputState" class="form-label">Placement Round </label>
+        <select name="QRound" class="form-select">
+          <option value="SELECT ONE  ">{{"SELECT ONE "}}</option>
+          <option value="Coding Round">{{"Coding Round"}}</option>
+          <option value="Technical Interview Round">{{"Technical Interview Round"}}</option>
+          <option value="HR Round">{{"HR Round"}}</option>
+          <option value="Combine Questions">{{"Combine Questions"}}</option>
+
+          
+        </select>
+      </div>
+
+
+      <div class="col-12">
+        <label for="QQuestion">Enter Questions</label>
+        <textarea class="form-control" id="QQuestion"  name="QQuestion" rows="5" 
+        placeholder=
+        "
+        Q-1 What is ArrayList? 
+        Q-2 Different between Compiler and Interpreter?
+        Q-3 Write Merge Sort from stratch.
+        "
+        ></textarea>
+      </div>
+    
+
+    <div class="col-12">
+     
+        
+      </div>
+   
+    <div class="col-20" style="margin-bottom: 20px;">
+      <button type="submit" class="btn btn-primary">ADD</button>
+    </div>
+  </form>
+
+</div>
+
+{% endblock %}
+</body>
+
+</html>

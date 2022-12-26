@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block head%}
+<title>
+  Home
+</title>
+{% endblock %}
+
+
+
+{% block body%}
+
+<form class="row g-3 " style="margin-left: 50px;  margin-top: 10px; margin-bottom: 20px; margin-right: 150px;  " method="POST">
+  <div class="col-md-5" >
+    <label for='rname' class="form-label">Name</label>
+    <input type="text" class="form-control" name='rname'>
+  </div>
+  <div class="col-md-5">
+    <label for="rname" class="form-label">Roll No.</label>
+    <input type="text" class="form-control" name="rrollno" placeholder="2019XXX">
+  </div>
+  <div class="col-5">
+    <label for="rtitle" class="form-label">Title</label>
+    <input type="text" class="form-control" name="rtitle" placeholder="Need data Cable">
+  </div>
+
+  <div class="col-md-5">
+    <label for="inputState" class="form-label">Request Type </label>
+    <select name="rcategory" class="form-select">
+      <option value="SELECT ONE  ">{{"SELECT ONE "}}</option>
+      <option value="GOODS">{{"GOODS"}}</option>
+      <option value="SERVICES">{{"SERVICES"}}</option>
+      <option value="PLACEMENT">{{"PLACEMENT"}}</option>
+
+
+    </select>
+  </div>
+
+
+  <div class="col-10">
+    <label for="rdescription" class="form-label">Description</label>
+    <input type="text" class="form-control" name="rdescription" placeholder="">
+  </div>
+  <div class="col-md-5">
+    <label for="rphone" class="form-label">Contact </label>
+    <input type="text" class="form-control" name="rphone">
+  </div>
+  <div class="col-md-5">
+    <label for="inputState" class="form-label">Preferred Mode of Contact</label>
+    <select name="rcontactvia" class="form-select">
+      <option value="Phone Call">{{"Phone Call"}}</option>
+      <option value="Email">{{"Email"}}</option>
+      <option value="Whatsapp">{{"Whatsapp"}}</option>
+
+
+
+    </select>
+  </div>
+
+  <div class="col-12">
+
+
+  </div>
+
+  <div class="col-20" style="margin-bottom: 30px;">
+    <button type="submit" class="btn btn-primary">Post Request</button>
+  </div>
+</form>
+
+{% endblock %}
+
+</body>
+
+</html>

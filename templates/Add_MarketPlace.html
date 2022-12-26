@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block head%}
+<title>
+  Add_To_MarketPlace
+</title>
+{% endblock %}
+
+
+
+{% block body%}
+
+<form class="row g-3" style="margin-left: 50px;  margin-top: 10px; margin-bottom: 20px; margin-right: 150px;" method="POST" enctype="multipart/form-data">
+  <div class="col-md-6">
+    <label for='name' class="form-label">Name</label>
+    <input type="text" class="form-control" name='name'>
+  </div>
+
+  <div class="col-md-4">
+    <label for="rollno" class="form-label">Roll No.</label>
+    <input type="text" class="form-control" name="rollno" placeholder="2019XXX">
+  </div>
+
+  <div class="col-6">
+    <label for="title" class="form-label">Item Name</label>
+    <input type="text" class="form-control" name="title" placeholder="Scientific Calculator">
+  </div>
+
+  <div class="col-md-4">
+
+    <label for="f" class="form-label" >Upload Photo</label>
+    <input type="file" name="file"> 
+   
+  </div>
+
+
+  <div class="col-10">
+    <label for="description" class="form-label">Description</label>
+    <input type="text" class="form-control" name="description" placeholder="">
+  </div>
+  <div class="col-md-6">
+    <label for="phone" class="form-label">Contact </label>
+    <input type="text" class="form-control" name="phone">
+  </div>
+  <div class="col-md-4">
+    <label for="inputState" class="form-label">Preferred Mode of Contact</label>
+    <select name="contactvia" class="form-select">
+      <option value="Phone Call">{{"Phone Call"}}</option>
+      <option value="Email">{{"Email"}}</option>
+      <option value="Whatsapp">{{"Whatsapp"}}</option>
+
+
+
+    </select>
+  </div>
+
+  <div class="col-12">
+
+
+  </div>
+
+  <div class="col-20">
+    <button type="submit" class="btn btn-primary">Add to MarketPlace</button>
+  </div>
+</form>
+
+{% endblock %}
+
+</body>
+
+</html>
